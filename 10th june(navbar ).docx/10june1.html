@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar Layouts</title>
+
+    <style>
+        body {
+            background-color: #b3ffff;
+            font-family: Arial, sans-serif;
+        }
+        .bwc{
+            text-align: right;
+            font-size: 30px;
+            opacity: 40%;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: #006666;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            margin: 100px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: white;
+            letter-spacing: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            margin: 0 20px;
+        }
+
+        .contact a {
+            background-color: white;
+            color: #006666;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 22px;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+        }
+
+        .layout1 {
+            justify-content: space-between;
+        }
+
+        .layout1 .menu {
+            flex: 1;
+            text-align: center;
+        }
+        .layout2 {
+            justify-content: space-between;
+        }
+
+        .layout2 .menu {
+            order: 1;
+        }
+
+        .layout2 .contact {
+            order: 2;
+        }
+
+        .layout2 .logo {
+            order: 3;
+        }
+
+        .layout3 {
+            justify-content: space-between;
+        }
+
+        .layout3 .menu {
+            order: 1;
+        }
+
+        .layout3 .logo {
+            order: 2;
+        }
+
+        .layout3 .contact {
+            order: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bwc">BOYWITHCODES</div>
+    <div class="navbar layout1">
+        <div class="logo">B W C</div>
+        <div class="menu">
+            <a>HOME</a>
+            <a>ABOUT</a>
+            <a>SERVICES</a>
+        </div>
+        <div class="contact">
+            <a>CONTACT</a>
+        </div>
+    </div>
+
+    <div class="navbar layout2">
+        <div class="menu">
+            <a>HOME</a>
+            <a>ABOUT</a>
+            <a>SERVICES</a>
+        </div>
+        <div class="contact">
+            <a>CONTACT</a>
+        </div>
+        <div class="logo">B W C</div>
+    </div>
+
+    <div class="navbar layout3">
+        <div class="menu">
+            <a>HOME</a>
+            <a>ABOUT</a>
+            <a>SERVICES</a>
+        </div>
+        <div class="logo">B W C</div>
+        <div class="contact">
+            <a>CONTACT</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+        }
+
+        .box {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont {
+            width: 280px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 30px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont:nth-child(2) {
+            background-color: #ff007b;
+            border: none;
+            color: #fff;
+        }
+
+        .logo i {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .cont p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        .cont button {
+            padding: 12px 30px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .cont:nth-child(1) button, .cont:nth-child(3) button {
+            background-color: black;
+            color: white;
+        }
+
+        .cont:nth-child(2) button {
+            background-color: white;
+            color: #ff007b;
+        }
+        .cont button:hover {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cont">
+            <div class="logo">
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+            <div class="name">TWITTER</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?</p>
+            <button>READ MORE</button>
+        </div>
+
+        <div class="cont">
+            <div class="logo">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="name">INSTAGRAM</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?</p>
+            <button>READ MORE</button>
+        </div>
+
+        <div class="cont">
+            <div class="logo">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="name">YOUTUBE</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?</p>
+            <button>READ MORE</button>
+        </div>
+    </div>
+</body>
+</html>
