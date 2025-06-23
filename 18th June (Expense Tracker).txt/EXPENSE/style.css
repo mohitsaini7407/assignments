@@ -1,0 +1,94 @@
+body {
+  background: #ff0000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+.balance {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 10px 0;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  background: #fafafa;
+}
+
+.money {
+  font-size: 1.2em;
+}
+
+.plus {
+  color: green;
+}
+
+.minus {
+  color: red;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.list li {
+  background: #fff;
+  padding: 10px;
+  border-right: 5px solid;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.list li.plus {
+  border-color: green;
+}
+
+.list li.minus {
+  border-color: red;
+}
+
+.list button {
+  background: none;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
