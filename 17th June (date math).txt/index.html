@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Practice  Math, Date, Timers & DOM</title>
+</head>
+<body>
+  <h2>Math Results</h2>
+  <div id="math-random"></div>
+  <div id="math-sqrt"></div>
+  <div id="math-rounding"></div>
+
+  <h2>Date Results</h2>
+  <div id="current-date"></div>
+  <div id="current-year"></div>
+  <div id="days-left"></div>
+
+  <h2>Timers</h2>
+  <div id="welcome-message"></div>
+
+  <h2>DOM Practical</h2>
+  <p id="hello-text"></p>
+  <div id="html-text"></div>
+  <div id="list-container"></div>
+
+  <script>
+    
+    function getRandom() {
+      return Math.floor(Math.random() * 100) + 1;
+    }
+
+    function getSqrt(num) {
+      return Math.sqrt(num);
+    }
+
+    function showRounding(num) {
+      return {
+        floor: Math.floor(num),
+        ceil: Math.ceil(num),
+        round: Math.round(num)
+      };
+    }
+
+    
+    const today = new Date();
+
+    function getDaysLeftInYear() {
+      const end = new Date(today.getFullYear(), 11, 31); // Dec 31
+      const diff = end - today;
+      return Math.ceil(diff / (1000 * 60 * 60 * 24));
+    }
+
+    function countdownTimer() {
+      let count = 5;
+      const interval = setInterval(() => {
+        console.log(count);
+        if (count === 1) {
+          clearInterval(interval);
+          console.log("Time’s up!");
+        }
+        count--;
+      }, 1000);
+    }
+
+    function delayedWelcome() {
+      setTimeout(() => {
+        document.getElementById("welcome-message").innerText = "Welcome to the JS Practice!";
+      }, 2000);
+    }
+
+
+    window.onload = function () {
+      const rand = getRandom();
+      const sqrtVal = getSqrt(81);
+      const roundVals = showRounding(4.7);
+
+      document.getElementById("math-random").innerText = "Random number (1-100): " + rand;
+      document.getElementById("math-sqrt").innerText = "Square root of 81: " + sqrtVal;
+      document.getElementById("math-rounding").innerText =
+        `For 4.7 → Floor: ${roundVals.floor}, Ceil: ${roundVals.ceil}, Round: ${roundVals.round}`;
+      document.getElementById("current-date").innerText = "Current Date & Time: " + today;
+      document.getElementById("current-year").innerText = "Current Year: " + today.getFullYear();
+      document.getElementById("days-left").innerText = "Days left in the year: " + getDaysLeftInYear();
+
+      countdownTimer();
+      delayedWelcome();
+
+      document.getElementById("hello-text").innerText = "Hello World";
+      document.getElementById("html-text").innerHTML = "<b>JavaScript is Fun</b>";
+
+      const skills = ["HTML", "CSS", "JS"];
+      let listHTML = "<ul>";
+      for (let skill of skills) {
+        listHTML += `<li>${skill}</li>`;
+      }
+      listHTML += "</ul>";
+      document.getElementById("list-container").innerHTML = listHTML;
+    };
+  </script>
+</body>
+</html>
