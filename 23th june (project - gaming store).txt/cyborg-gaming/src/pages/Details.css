@@ -1,0 +1,10 @@
+/* Details.css - Cyborg Gaming Theme */
+
+.flex {
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+img {
+  box-shadow: var(--shadow);
+} 
